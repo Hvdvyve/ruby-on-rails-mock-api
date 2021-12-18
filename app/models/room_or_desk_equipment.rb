@@ -1,0 +1,2 @@
+class RoomOrDeskEquipment < ApplicationRecord
+end
