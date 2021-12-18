@@ -26,6 +26,6 @@ RoomOrDesk.create!([
 RoomOrDeskEquipment.destroy_all
 
 RoomOrDeskEquipment.create!([
-    { RoomOrDeskId: 1, EquipmentId:1, status: 'working' },
-    { RoomOrDeskId: 1, EquipmentId:2, status: 'working' }
+    { roomOrDeskId: 1, equipmentId:1, status: 'working' },
+    { roomOrDeskId: 1, equipmentId:2, status: 'working' }
 ])
