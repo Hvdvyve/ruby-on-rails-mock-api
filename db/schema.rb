@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 2021_12_18_181628) do
   create_table "equipment", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "room_or_desk_equipments", force: :cascade do |t|
-    t.integer "RoomOrDeskId"
-    t.integer "EquipmentId"
+    t.integer "roomOrDeskId"
+    t.integer "equipmentId"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_12_18_181628) do
     t.integer "floor"
     t.string "number"
     t.integer "places"
-    t.string "type"
+    t.string "rod_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

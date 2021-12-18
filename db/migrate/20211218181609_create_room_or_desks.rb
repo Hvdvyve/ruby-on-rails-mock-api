@@ -5,7 +5,7 @@ class CreateRoomOrDesks < ActiveRecord::Migration[6.1]
       t.integer :floor
       t.string :number
       t.integer :places
-      t.string :type
+      t.string :rod_type
 
       t.timestamps
     end
