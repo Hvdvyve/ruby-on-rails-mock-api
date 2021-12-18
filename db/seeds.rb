@@ -10,8 +10,8 @@ Equipment.destroy_all
 
 Equipment.create!([
     { name: 'Beemer', description: 'Some kind of projector.'}, 
-    { name: 'Cable', description: 'Internet connections with cable connection.', status: 'working'}, 
-    { name: 'Lamp', description: 'Movable lamp', status: 'working'}
+    { name: 'Cable', description: 'Internet connections with cable connection.'}, 
+    { name: 'Lamp', description: 'Movable lamp'}
     ])
 
 
