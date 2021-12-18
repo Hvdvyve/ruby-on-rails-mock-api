@@ -1,0 +1,2 @@
+class RoomOrDeskEquipmentController < ApplicationController
+end
