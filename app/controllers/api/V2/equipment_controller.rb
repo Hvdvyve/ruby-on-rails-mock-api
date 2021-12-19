@@ -19,7 +19,7 @@ class Api::V2::EquipmentController < ApplicationController
         if @equipment.save
             render json: { message: 'Equipment created successfully.'}, status: 200
         else
-            render error: { error: 'Cannot create Equipment' }, status: 400
+            render error: { error: 'Cannot create Equipment.' }, status: 400
         end
     end
 
@@ -30,7 +30,7 @@ class Api::V2::EquipmentController < ApplicationController
             @equipment.destroy
             render json: { message: 'Equipment deleted successfully.' }, status: 200 
         else
-            render error: { error: 'Cannot delete Equipment' }, status: 400
+            render error: { error: 'Cannot delete Equipment.' }, status: 400
         end
     end
 

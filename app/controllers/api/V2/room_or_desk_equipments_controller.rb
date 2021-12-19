@@ -18,20 +18,36 @@ class Api::V2::RoomOrDeskEquipmentsController < ApplicationController
         @room_or_desk_equipments = RoomOrDeskEquipment.find(params[:id])
         if @room_or_desk_equipments
             @room_or_desk_equipments.update(params.permit(:status))
-            render json: { message: 'room_or_desk_equipments status updated successfully.'}, status: 200  
+            render json: { message: 'RoomOrDeskEquipment status updated successfully.'}, status: 200  
         else
-            render error: { error: 'Cannot update Equipment status' }, status: 400
+            render error: { error: 'Cannot update Equipment status.' }, status: 400
         end
-          
     end
 
     #POST /room_or_desk_equipments
     def create
-        render json: { message: 'room_or_desk_equipments created successfully.'}, status: 200    
+        @room_or_desk_equipments = RoomOrDeskEquipment.new(fact_params)
+        if @room_or_desk_equipments.save
+            render json: { message: 'RoomOrDeskEquipment created successfully.'}, status: 200  
+        else
+            render error: { error: 'Cannot create RoomOrDeskEquipment.' }, status: 400
+        end  
     end
 
     #DELETE /room_or_desk_equipments/:id
     def destroy
-        render json: { message: 'room_or_desk_equipments deleted successfully.' }, status: 200 
+        @room_or_desk_equipments = RoomOrDeskEquipment.find(params[:id])
+        if @room_or_desk_equipments
+            @room_or_desk_equipments.destroy
+            render json: { message: 'RoomOrDeskEquipment deleted successfully.' }, status: 200 
+        else
+            render error: { error: 'Cannot delete RoomOrDeskEquipment.' }, status: 400
+        end
+    end
+
+    private
+
+    def fact_params
+        params.permit(:roomOrDeskId, :equipmentId, :status)
     end
 end
