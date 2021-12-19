@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         resources :equipment
         resources :room_or_desks
         resources :room_or_desk_equipments
+        resources :review
 
       end
       
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
         resources :equipment
         resources :room_or_desks
         resources :room_or_desk_equipments
+        resources :review
         
       end
     end
