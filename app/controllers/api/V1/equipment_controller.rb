@@ -16,4 +16,6 @@ class Api::V1::EquipmentController < ApplicationController
         render json: { name: 'Beemer', description: 'Some kind of projector.'}
     end
 
+    
+
 end
