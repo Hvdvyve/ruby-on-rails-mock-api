@@ -3,25 +3,43 @@ class Api::V2::ReviewController < ApplicationController
 
     #GET /review
     def index
-        render json: ([
-            { id: 1, reservationId: 1, userId:1, review: 'I did not get the coffee I asked the staff to bring me.' },
-            { id: 2, reservationId: 2, userId:1, review: 'The place really needs to be cleaned...' }
-        ])
+        @review = Review.all
+        render json: @review
     end
 
     #GET /review/:id
     def show
-        render json: { id: 2, reservationId: 2, userId:1, review: 'The place really needs to be cleaned...' }
+        @review = Review.find(params[:id])
+        render json: @review
     end
 
     #POST /review
     def create
-        render json: { message: 'Review created successfully.'}, status: 200    
+        @review = Review.new(fact_params)
+        if @review.save
+            render json: { message: 'Review created successfully.'}, status: 200 
+        else
+            render error: { error: 'Cannot create Review.' }, status: 400
+        end     
     end
 
     #DELETE /review/:id
     def destroy
-        render json: { message: 'Review deleted successfully.' }, status: 200 
+        def destroy
+            @review = Review.find(params[:id])
+            if @review
+                @review.destroy
+                render json: { message: 'Review deleted successfully.' }, status: 200 
+            else
+                render error: { error: 'Cannot delete Review.' }, status: 400
+            end
+        end 
+    end
+
+    private
+
+    def fact_params
+        params.permit(:reservationId, :userId, :review)
     end
 
 end
