@@ -29,3 +29,10 @@ RoomOrDeskEquipment.create!([
     { roomOrDeskId: 1, equipmentId:1, status: 'working' },
     { roomOrDeskId: 1, equipmentId:2, status: 'working' }
 ])
+
+Review.destroy_all
+
+Review.create!([
+    { reservationId: 1, userId:1, review: 'I did not get the coffee I asked the staff to bring me.' },
+    { reservationId: 2, userId:1, review: 'The place really needs to be cleaned...' }
+])
