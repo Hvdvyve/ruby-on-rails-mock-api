@@ -4,24 +4,17 @@ Rails.application.routes.draw do
       namespace 'v1' do
         
         resources :equipment
+        resources :room_or_desks
+        resources :room_or_desk_equipments
 
       end
       
       namespace 'v2' do
         
         resources :equipment
+        resources :room_or_desks
+        resources :room_or_desk_equipments
         
       end
     end
-#  resources :equipment
-#  resources :room_or_desks
-#  resources :room_or_desk_equipments
-
 end
-
-#namespace 'api' do
-#  namespace 'v1' do
-#    resources :equipment
-#    resources :room_or_desks
-#    resources :room_or_desk_equipments
-#  end
