@@ -4,14 +4,35 @@ class Api::V1::RoomOrDeskEquipmentsController < ApplicationController
     #GET /room_or_desk_equipments
     def index
         render json: ([
-            { roomOrDeskId: 1, equipmentId:1, status: 'working' },
-            { roomOrDeskId: 1, equipmentId:2, status: 'working' }
+            {
+                "id": 1,
+                "roomOrDeskId": 1,
+                "equipmentId": 1,
+                "status": "working",
+                "created_at": "2021-12-19T10:50:35.448Z",
+                "updated_at": "2021-12-19T10:50:35.448Z"
+            },
+            {
+                "id": 2,
+                "roomOrDeskId": 1,
+                "equipmentId": 2,
+                "status": "broken",
+                "created_at": "2021-12-19T10:50:35.453Z",
+                "updated_at": "2021-12-19T16:53:51.009Z"
+            }
         ])
     end
 
     #GET /room_or_desk_equipments/:id
     def show
-        render json: { id: 1, roomOrDeskId: 1, equipmentId:2, status: 'working' }
+        render json: {
+            "id": 1,
+            "roomOrDeskId": 1,
+            "equipmentId": 1,
+            "status": "working",
+            "created_at": "2021-12-19T10:50:35.448Z",
+            "updated_at": "2021-12-19T10:50:35.448Z"
+        }
     end
 
     #PUT /room_or_desk_equipments/:id

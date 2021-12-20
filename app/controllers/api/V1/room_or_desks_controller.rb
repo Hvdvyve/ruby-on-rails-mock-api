@@ -4,14 +4,41 @@ class Api::V1::RoomOrDesksController < ApplicationController
     #GET /room_or_desks
     def index
         render json: ([
-            { id: 1, wing: 'A', floor: 1, number: 'A12', places: 1, rod_type: 'Desk' },
-            { id: 2, wing: 'B', floor: 1, number: 'A1', places: 2, rod_type: 'Conference room' }
+            {
+                "id": 1,
+                "wing": "A",
+                "floor": 1,
+                "number": "A12",
+                "places": 1,
+                "rod_type": "Desk",
+                "created_at": "2021-12-19T10:50:35.427Z",
+                "updated_at": "2021-12-19T10:50:35.427Z"
+            },
+            {
+                "id": 2,
+                "wing": "B",
+                "floor": 1,
+                "number": "A1",
+                "places": 2,
+                "rod_type": "Conference room",
+                "created_at": "2021-12-19T10:50:35.433Z",
+                "updated_at": "2021-12-19T10:50:35.433Z"
+            }
         ])
     end
 
     #GET /room_or_desks/:id
     def show
-        render json: { id: 1, wing: 'A', floor: 1, number: 'A12', places: 1, rod_type: 'Desk' }
+        render json: {
+            "id": 1,
+            "wing": "A",
+            "floor": 1,
+            "number": "A12",
+            "places": 1,
+            "rod_type": "Desk",
+            "created_at": "2021-12-19T10:50:35.427Z",
+            "updated_at": "2021-12-19T10:50:35.427Z"
+        }
     end
 
     #PUT /room_or_desks/:id

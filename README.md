@@ -1,3 +1,15 @@
+# A Ruby on Rails Api (mock + Postgres)
+
+This api is a deliverable for the Trending topics project. Gitpod was used for the setup & development. There are two versions:
+v1: A mock api
+v2: An api connected to the PostgressDb
+
+## Setup project
+
+Make sure you have Ruby 2.7.3 or higher installed.
+After pulling the repo, you need to run the following commands before running the server:
+bundle install
+
 # A Ruby on Rails with Postgres template on Gitpod
 
 This is a [Ruby on Rails with Postgres](https://rubyonrails.org) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/).
