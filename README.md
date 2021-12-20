@@ -8,12 +8,27 @@ v2: An api connected to the PostgressDb
 -There are seeders in db/seeds.rb with some mock data.
 
 
-## Setup project
+## Deploy project
 
-### Use the Gitpod workspace
-Open this link to a Gitpod workspace: https://gitpod.io/start/#lime-crawdad-jna6ozg7 
-The server is running in the workspace now (the init has been done in .gitpod.yml).
-You can connect to the workspace from your host trough a remote connection, for insance with VS code: Click on the hamburger menu on the upper left corner of the workspace and click 'Gitpod: Open is VS Code'.
+### Use Gitpod
+
+There is a .gitpod.yml file that takes care of deployment in this case.
+Have the Gitpod extention on your browser:
+Any Chromium-based browser: https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
+Firefox: https://addons.mozilla.org/nl/firefox/addon/gitpod/
+
+Go to the github repo https://github.com/Hvdvyve/reservations-backend-golang and open a Gitpod workspace using the Gitpod extention (green button Gitpod).
+The server is running on localhost port 3000.
+
+### Locally
+
+Have Ruby 2.7.3 or higher installed.
+After pulling the files (*see .gitpod.yml file) do the following commands:
+bundle install
+yarn install
+rails server -b 0.0.0.0
+rake db:create
+rake db:seed
 
 ### Do this when changing stuff in migrations and/ or seeders 
 rake db:migrate:reset
