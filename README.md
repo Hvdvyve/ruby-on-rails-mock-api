@@ -17,7 +17,7 @@ Have the Gitpod extention on your browser:
 Any Chromium-based browser: https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
 Firefox: https://addons.mozilla.org/nl/firefox/addon/gitpod/
 
-Go to the github repo https://github.com/Hvdvyve/reservations-backend-golang and open a Gitpod workspace using the Gitpod extention (green button Gitpod).
+Go to the github repo https://github.com/Hvdvyve/ruby-on-rails-mock-api and open a Gitpod workspace using the Gitpod extention (green button Gitpod).
 The server is running on localhost port 3000.
 
 ### Locally
